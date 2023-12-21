@@ -21,21 +21,38 @@
             border-radius: 50%;
             width: 8em;
             height: 8em;
-            animation: spin 3s linear infinite;
+            animation: spin 4s linear infinite;
         }
 
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Center the copyright text with color transition */
+        .copyright {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 14px;
+            animation: colorChange 4s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: #fff; }
+            50% { color: #ffcc00; }
+            100% { color: #fff; }
+        }
     </style>
-    <meta http-equiv="refresh" content="4;url=SinhGhostlyStory.html">
+    <meta http-equiv="refresh" content="6;url=SinhGhostlyStory.html">
 </head>
 <body>
     <div class="loader"></div>
 
-    <div style="position: fixed; bottom: 10px; right: 10px; color: white; font-size: 12px;">
-        &copy; 2023 Sinh Ghostly.Story. All rights reserved.
+    <div class="copyright">
+        &copy; 2023 Sinh Ghostly Story. All rights reserved.
     </div>
 </body>
 </html>
