@@ -5,54 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="IMG_20231127_215947.JPG">
     <title>សុីញ រឿងខ្មោច</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: black;
-        }
 
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #728;
-            border-radius: 50%;
-            width: 8em;
-            height: 8em;
-            animation: spin 2s linear infinite;
-        }
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      display: flex;
+      color: #fff;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Center the copyright text with color transition */
-        .copyright {
+    footer {
             position: fixed;
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             color: #fff;
             font-size: 14px;
-            animation: colorChange 4s infinite;
-        }
+    
+    }
+  #mey {            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 14px;}
+#mey1 {top:230px;position: fixed; font-size: 20px;}
+#mey2 {top:50px;position: fixed; font-size: 40px;}
 
-        @keyframes colorChange {
-            0% { color: #fff; }
-            50% { color: #ffcc00; }
-            100% { color: #fff; }
-        }
-    </style>
-    <meta http-equiv="refresh" content="7;url=SinhGhostlyStory.html">
+    #sinh {
+      background: linear-gradient(50deg, red, yellow);
+      -webkit-background-clip: text;
+      animation: changeColor 5s infinite; /* Add animation for color change */
+    }
+
+    @keyframes changeColor {
+      10% {
+        color: transparent;
+        background: transparent; /* Change background to transparent */
+      }
+      50% {
+        color: transparent;
+        background: transparent;
+      }
+
+     
+      50% {
+        color: transparent;
+        background: transparent;
+      }
+      30% {
+        color: transparent;
+        background: transparent;
+      }
+      20% {
+        color: transparent;
+        background: transparent;
+      }
+      10% {
+        color: transparent;
+        background: transparent;
+      }
+      
+  </style>
 </head>
 <body>
-    <div class="loader"></div>
+  <h1>
 
-    <div class="copyright">
-        &copy; 2023 Sinh Ghostly Story<br/>Developer Yan Sinh Alone 
-    </div>
+      <div id="sinh">WELLCOME TO YAN SINH</div></h1>
+<div id="mey1">
+<span style="color:#286">L</span>oading...
+</div>
+<div id="mey2">
+<span style="color:#732">G</span>hostly Story
+</div>
+<div id="mey">
+  <p><u><span style="color:red">NOTE :</span></u> TIK TIK @sh6m1 <span style="color:red">sh</span>=<span style="color:yellow">s</span>in<span style="color:yellow">h</span> <span style="color:red">6</span>=The numerology of the number <span style="color:yellow">6</span> signifies working hard to create peaceful and meaningful relationships with other people. <span style="color:red">m<span>= i love <span style="color:yellow">m</span>** <span style="color:red">1</span>=only</p>
+  </div>
+  <footer>
+    &copy; 2023 Sinh Ghostly Story. All rights reserved.
+  </footer>
+
+  <script>
+    // JavaScript to generate random color
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Apply random color to #sinh element
+    function changeTextColor() {
+      document.getElementById('sinh').style.color = getRandomColor();
+    }
+
+    // Call the function initially and then every 5 seconds (adjust as needed)
+    changeTextColor();
+    setInterval(changeTextColor, 5000);
+  </script>
 </body>
 </html>
+
