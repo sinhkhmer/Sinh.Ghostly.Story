@@ -1,104 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta http-equiv="refresh" content="7;url=SinhGhostlyStory.html">
+<meta http-equiv="refresh" content="7;url=SinhGhostlyStory.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="IMG_20231127_215947.JPG">
     <title>សុីញ រឿងខ្មោច</title>
 
-  <style>
-      
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      display: flex;
-      color: #fff;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    footer {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            display: flex;
             color: #fff;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #sinh {
+            margin-top: auto;
+            background: linear-gradient(50deg, red, yellow);
+            -webkit-background-clip: text;
+            animation: changeColor 5s infinite;
+            margin-bottom: 20px;
+        }
+
+        .story-img {
+            border-radius: 9px;
+            box-shadow: 9px 5px 10px rgba(13, 98, 5, 1.3);
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: auto;
             font-size: 14px;
-    
-    }
-      #mey1 {top:230px;position: fixed; font-size: 20px;}
+        }
 
-    #sinh {
-      background: linear-gradient(50deg, red, yellow);
-      -webkit-background-clip: text;
-      animation: changeColor 5s infinite; /* Add animation for color change */
-    }
-
-    @keyframes changeColor {
-      10% {
-        color: transparent;
-        background: transparent; /* Change background to transparent */
-      }
-      50% {
-        color: transparent;
-        background: transparent;
-      }
-
-     
-      50% {
-        color: transparent;
-        background: transparent;
-      }
-      30% {
-        color: transparent;
-        background: transparent;
-      }
-      20% {
-        color: transparent;
-        background: transparent;
-      }
-      10% {
-        color: transparent;
-        background: transparent;
-      }
-      
-  </style>
+        @keyframes changeColor {
+            10%, 50% {
+                color: transparent;
+                background: transparent;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>
+    <h1 id="sinh">YAN SINH⚰️</h1>
+    <img class="story-img" id="random-img" width="200" alt="Random Image">
+    <div>
+        <center>Loading...</center></br>
+    </div>
+    <div>
+        <center>
+            username
+           <span style="color:cyan">sh6m1</span> 
+            <span style="color:red">SH=</span> 
+            <span style="color:yellow">"S</span>in<span style="color:yellow">h"</span> 
+            <span style="color:red">6=</span> 
+            <span style="color:pink">The number
+           <span style="color:yellow"> "6"</span> in the context of love can represent harmony 
+            <span style="color:red">M=</span> 
+            <span style="color:yellow">"M</span>ey"
+            <span style="color:red"> 1=</span>The number 
+            <span style="color:yellow">"1"</span> in the context of love often represents new beginnings
+        </center>
+    </div>
+    <footer>
+        &copy; 2023 MEY @sh6m1.
+    </footer>
+    <script>
+        // Array of image URLs
+        const images = [
+            "sinh.png",
+          
+            
+            // Add more image URLs as needed
+        ];
 
-      <div id="sinh">YAN SINH</div></h1>
-<div id="mey1">
-<span style="color:#286">L</span>oading...
-</div>
-  <footer>
-    &copy; 2023 MEY @sh6m1.
-  </footer>
+        // Function to get a random image URL
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+// Function to get a random image URL
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
 
-  <script>
-    // JavaScript to generate random color
-    function getRandomColor() {
-      const letters = '0123456789ABCDEF';
-      let color = '#';
-      for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-    }
+        // Function to update the image every 5 seconds
+        function updateRandomImage() {
+            const randomImgElement = document.getElementById('random-img');
+            randomImgElement.src = getRandomImage();
+        }
 
-    // Apply random color to #sinh element
-    function changeTextColor() {
-      document.getElementById('sinh').style.color = getRandomColor();
-    }
+        // Update the image initially
+        updateRandomImage();
 
-    // Call the function initially and then every 5 seconds (adjust as needed)
-    changeTextColor();
-    setInterval(changeTextColor, 5000);
-  </script>
+        // Update the image every 5 seconds
+        setInterval(updateRandomImage, 2000);
+        // Update the src attribute of the image with a random image URL
+        const randomImgElement = document.getElementById('random-img');
+        randomImgElement.src = getRandomImage();
+    </script>
 </body>
 </html>
