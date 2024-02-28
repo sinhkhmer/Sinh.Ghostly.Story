@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="refresh" content="7;url=SinhGhostlyStory.html">
+	<meta http-equiv="refresh" content="7;url=SinhGhostlyStory.html">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   
     <link rel="icon" href="IMG_20231127_215947.JPG">
     <title>សុីញ រឿងខ្មោច</title>
-
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #000;
-            display: flex;
+            background-color: #111;
             color: #fff;
+            display: flex;
             align-items: center; /* Center vertically */
             justify-content: center; /* Center horizontally */
-            height: 100vh;
-            flex-direction: column;
+            min-height: 100vh; /* Ensure full viewport height */
+            flex-direction: column; /* Stack items vertically */
         }
 
         #sinh {
@@ -31,13 +31,35 @@
 
         .story-img {
             border-radius: 9px;
-            box-shadow: 9px 5px 10px rgba(13, 98, 5, 1.3);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
             margin-bottom: 20px;
         }
+        #mey{     border-radius: 9px;       box-shadow: rgba(255, 255, 255, 0.5);    margin-bottom: 20px;}
 
         footer {
             margin-top: auto;
             font-size: 14px;
+            color: #999;
+            text-align: center;
+            padding: 10px;
+            background-color: #111;
+            border-top: 1px solid #333;
+            width: 100%; /* Ensure footer spans full width */
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        /* Center the <p> element */
+        .username-info {
+            text-align: center;
+            font-size: 16px; /* Adjust font size */
+            color: #ccc; /* Change text color */
+            margin-bottom: 20px; /* Add margin at the bottom */
+            padding: 10px; /* Add padding */
+
         }
 
         @keyframes changeColor {
@@ -49,61 +71,50 @@
     </style>
 </head>
 <body>
+	<div id="ww_c1ed35b51c984" v='1.20' loc='id' a='{"t":"ticker","lang":"km","ids":["wl11820"],"cl_bkg":"#000000","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one","font":"Times"}'style="color:#00ff00">Weather for the Following Location: <a href="https://2ua.org/khm/takeo_province/map/" id="ww_c1ed35b51c984_u" target="_blank" style="color:pink">Takeo Province map, Cambodia</a></div><script async src="https://srv1.weatherwidget.org/js/?id=ww_c1ed35b51c984"></script>
+	
     <h1 id="sinh">YAN SINH⚰️</h1>
-    <img class="story-img" src="sinh.png" id="random-img" width="200" alt="Yan Sinh Sad love mey alone">
-    <div>
-        <center>Loading...</center></br>
-    </div>
-    <div>
-        <center>
-            username
-           <span style="color:cyan">sh6m1</span> 
+    <img class="story-img" src="sinh.png" width="200" alt="Yan Sinh Sad love mey alone">
+    <div id="countdown">Wait 7 seconds...</div> <!-- Display countdown here -->
+    <div class="username-info"> <!-- Added class for styling -->
+        <p>
+            Username: 
+            <span style="color:cyan">sh6m1</span> 
             <span style="color:red">SH=</span> 
             <span style="color:yellow">"S</span>in<span style="color:yellow">h"</span> 
             <span style="color:red">6=</span> 
             <span style="color:pink">The number
-           <span style="color:yellow"> "6"</span> in the context of love can represent harmony 
+            <span style="color:yellow"> "6"</span> in the context of love can represent harmony 
             <span style="color:red">M=</span> 
             <span style="color:yellow">"M</span><span style="color:#fff">ey</span>"
             <span style="color:red"> 1=</span>The number 
-            <span style="color:yellow">"1"</span> in the context of love often represents new beginnings
-        </center>
+            <span style="color:yellow">"1"</span> in the context of love often represents new beginnings </span><br/><br/> only for me understanding 😆 <br/>No Smiley for me. this page refresh in 7s is text khmer
+        </p>
     </div>
     <footer>
-        &copy; 2023 MEY @sh6m1.
+       No company &copy; 2023 <span style="color:#ffcc00"><a href="https://www.facebook.com/profile.php?id=100077826622555">CHHIN SIEV MEY</a></span> Tik Tok <a href="https://www.tiktok.com/@my.eka0">@my.eka0</a>
     </footer>
+
     <script>
-        // Array of image URLs
-        const images = [
-            "sinh.png",
-          
-            
-            // Chhin Siev Mey
-        ];
+        // Countdown timer function
+        function countdown() {
+            var countdownElement = document.getElementById('countdown');
+            var remainingTime = 6; // Set the initial countdown time
 
-       // Chhin Siev Mey
-        function getRandomImage() {
-            const randomIndex = Math.floor(Math.random() * images.length);
-            return images[randomIndex];
-        }
-// Chhin Siev Mey
-        function getRandomImage() {
-            const randomIndex = Math.floor(Math.random() * images.length);
-            return images[randomIndex];
+            var timer = setInterval(function() {
+                countdownElement.textContent = 'Wait ' + remainingTime + ' seconds...'; // Update countdown display
+
+                if (remainingTime <= 0) {
+                    clearInterval(timer); // Clear the timer when countdown reaches 0
+                    countdownElement.textContent = ''; // Clear countdown display
+                }
+
+                remainingTime--; // Decrement remaining time
+            }, 1000); // Update every second
         }
 
-        // Chhin Siev Mey        function updateRandomImage() {
-            const randomImgElement = document.getElementById('random-img');
-            randomImgElement.src = getRandomImage();
-        }
-
-        // Chhin Siev Mey        updateRandomImage();
-
-        // Chhin Siev Mey
-        setInterval(updateRandomImage, 2000);
-       // Chhin Siev Mey
-        const randomImgElement = document.getElementById('random-img');
-        randomImgElement.src = getRandomImage();
+        // Start the countdown
+        countdown();
     </script>
 </body>
 </html>
